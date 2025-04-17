@@ -15,7 +15,7 @@ function App() {
   const addTalk = useTalks((state) => state.addTalk);
 
   const handleSubmit = () => {
-    addTalk({ id: Date.now(), name, subject, duree, presentateur, objectif }); // Ajoute un utilisateur avec un ID unique
+    addTalk({ id: Date.now(), name, subject, duree, presentateur, objectif }); // Ajoute un talk avec un ID unique
     setName("");
     setSubject("");
     setDuree("");
@@ -28,13 +28,13 @@ function App() {
     <> 
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid d-flex justify-content-center">
-        <span class="navbar-brand mb-0 h1 fs-1">Projet To-do list</span>
+        <span class="navbar-brand mb-0 h1 fs-1">Projet Talks</span>
       </div>
     </nav>
     <div class="container-fluid big-padding">
       <div class="row">
       <div class="col">
-      <h2 class="d-flex justify-content-center">Ajout d'une tâche</h2>
+      <h2 class="d-flex justify-content-center">Ajout d'une talk</h2>
       <div className="input-group mb-3 flex-column gap-2 ">
         <div className="input-group">
           <span className="input-group-text" id="inputGroup-sizing-default">Titre</span>
@@ -99,7 +99,7 @@ function App() {
       </div>
       <div class="col">
       <div className="mt-4" id="Liste-Talks"> 
-        <h2 class="d-flex justify-content-center">Liste des tâches</h2>
+        <h2 class="d-flex justify-content-center">Liste des talks</h2>
         <TalkList />
       </div>
       </div>
